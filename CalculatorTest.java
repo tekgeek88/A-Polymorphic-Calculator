@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 
 // This is a test
+// This another test
 public class CalculatorTest {
 
 	static Scanner userInput = new Scanner(System.in);
