@@ -15,23 +15,6 @@ public class CalculatorTest {
 		boolean doMore = true;
 
 		System.out.println("\t\t\tThe Calculamator 5000 Pro\n");    
-
-		Calculator[] parentcal = new Calculator[1];
-		//	    parentcal[0] = new OctalCalculator();
-		//	    parentcal[0].set_currentOperator('+');
-		//	    parentcal[1] = new DecimalCalculator();
-		//	    parentcal[1].set_currentOperator('-');
-		//	    parentcal[2] = new HexaCalculator();
-		//	    parentcal[2].set_currentOperator('*');
-		parentcal[0] = new BinaryCalculator();
-		parentcal[0].set_currentOperator('/');
-
-
-		for (int i = 0; i < parentcal.length; i++)
-		{
-			testCalculator (parentcal[i]);
-		}	
-
 		do {
 			menuChoice = operations.displayMainMenu();
 			switch (menuChoice) {
@@ -40,16 +23,16 @@ public class CalculatorTest {
 				operations.base2();
 				break;
 			case 2:
-				System.out.println("\t\t ** Choice 2 selected **");
+				operations.base8();
 				break;
 			case 3:
-				System.out.println("\t\t ** Choice 3 selected **");
+				operations.base10();
 				break;
 			case 4:
-				System.out.println("\t\t ** Choice 4 selected **");
+				operations.base16();
 				break;
 			case 0:
-				System.out.println("\t\t ** Choice 0 selected **");
+				System.out.println("\t\t ** Exiting The Calcumalator 5000 Pro! **");
 				doMore = false;
 				break;
 
@@ -67,37 +50,5 @@ public class CalculatorTest {
 		System.out.println("\nHave a nice day!");
 	}// End of Main Method
 
-
-
-
-
-
-	public static void testCalculator(Calculator tempcal)
-	{
-
-		System.out.println("First Test on " + tempcal.getClass().getName());		
-		tempcal.set_firstOperand(63);
-		tempcal.set_secondOperand(33);
-		System.out.println(tempcal.displayExpression());
-		System.out.print("Result: ");
-		System.out.println(tempcal.result());
-
-		System.out.println("Second Test" + tempcal.getClass().getName());		
-		tempcal.set_firstOperand(103);
-		tempcal.set_secondOperand(33);
-		System.out.println(tempcal.displayExpression());
-		System.out.print("Result: ");
-		System.out.println(tempcal.result());
-
-		System.out.println("Third Test" + tempcal.getClass().getName());		
-		tempcal.set_firstOperand(100);
-		tempcal.set_secondOperand(50);
-		System.out.println(tempcal.displayExpression());
-		System.out.print("Result: ");
-		System.out.println(tempcal.result());
-
-		System.out.println("---------------------------------");
-
-	}
 
 }// End of CalculatorTest Class

@@ -20,6 +20,66 @@ public class Operations {
 	    System.out.print("Result: ");
 	    System.out.println(binaryCalculator.result());
 	}
+	
+	public void base8() {
+		System.out.println("\t\t ** Choice octal selected **");
+		// Make the calulator object
+		Calculator octalCalculator = new OctalCalculator();
+	    System.out.println("First Test on the " + octalCalculator.getClass().getName() + " class.\n\n");		
+		// Get first number
+	    System.out.print("Enter first number: ");
+	    octalCalculator.set_firstOperand(octalCalculator.getInput());
+	    // get second number
+		System.out.print("\nEnter second number: ");
+	    octalCalculator.set_secondOperand(octalCalculator.getInput());
+	    // Set the operator
+	    octalCalculator.set_currentOperator(displayOperatorMenu());
+		// Display their expression
+	    System.out.println(octalCalculator.displayExpression());
+	    // Display the result
+	    System.out.print("Result: ");
+	    System.out.println(octalCalculator.result());
+	}
+	
+	public void base10() {
+		System.out.println("\t\t ** Choice hexa selected **");
+		// Make the calulator object
+		Calculator hexaCalculator = new HexaCalculator();
+	    System.out.println("First Test on the " + hexaCalculator.getClass().getName() + " class.\n\n");		
+		// Get first number
+	    System.out.print("Enter first number: ");
+	    hexaCalculator.set_firstOperand(hexaCalculator.getInput());
+	    // get second number
+		System.out.print("\nEnter second number: ");
+	    hexaCalculator.set_secondOperand(hexaCalculator.getInput());
+	    // Set the operator
+	    hexaCalculator.set_currentOperator(displayOperatorMenu());
+		// Display their expression
+	    System.out.println(hexaCalculator.displayExpression());
+	    // Display the result
+	    System.out.print("Result: ");
+	    System.out.println(hexaCalculator.result());
+	}
+	
+	public void base16() {
+		System.out.println("\t\t ** Choice decimal selected **");
+		// Make the calulator object
+		Calculator decimalCalculator = new DecimalCalculator();
+	    System.out.println("First Test on the " + decimalCalculator.getClass().getName() + " class.\n\n");		
+		// Get first number
+	    System.out.print("Enter first number: ");
+	    decimalCalculator.set_firstOperand(decimalCalculator.getInput());
+	    // get second number
+		System.out.print("\nEnter second number: ");
+	    decimalCalculator.set_secondOperand(decimalCalculator.getInput());
+	    // Set the operator
+	    decimalCalculator.set_currentOperator(displayOperatorMenu());
+		// Display their expression
+	    System.out.println(decimalCalculator.displayExpression());
+	    // Display the result
+	    System.out.print("Result: ");
+	    System.out.println(decimalCalculator.result());
+	}
 
 	/**
 	 * Displays a menu to the user and returns a menu choice integer
